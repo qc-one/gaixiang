@@ -9,6 +9,24 @@ require(['jquery','cookie'],function($,cookie){
 		$(".a2").click(function(){
 			window.location = "html/list.html"
 		})
+		//跳转到购物车页
+		$(".shopcar").click(function(){
+			window.location = "html/cart.html"
+		})
+		$(".right_float_a2").click(function(){
+			window.location = "html/cart.html"
+		})
+		//跳到登录页
+		$(".top_wel").find("a").eq(0).click(function(){
+			window.location = "html/enter.html"
+		})
+		//跳到注册页
+		$(".top_wel").find("a").eq(1).click(function(){
+			window.location = "html/enroll.html"
+		})
+		//显示账号的用户名
+		let name = $.cookie("name");
+		$(".top_wel").find("span").text(name)
 		//我的盖象
 		$(".top_nav li:eq(1)").hover(function(){
 			$(this).addClass("mygai_01");
@@ -76,7 +94,7 @@ require(['jquery','cookie'],function($,cookie){
 		})
 		
 		//搜索框商品下拉列表
-		$(".top_search_select p").hover(function(){
+		$(".top_search_select").hover(function(){
 
 			$(".top_search_select ul").css("display","block")
 		},function(){

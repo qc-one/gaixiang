@@ -68,7 +68,7 @@ define(function(){
 		})
 		
 		//搜索框商品下拉列表
-		$(".top_search_select p").hover(function(){
+		$(".top_search_select").hover(function(){
 
 			$(".top_search_select ul").css("display","block")
 		},function(){
